@@ -1,6 +1,6 @@
 # ProgramlamaLab_Projeleri2018-2019
 Güz Dönemi Programlama Lab. Projeleri
--Proje 1:
+-----Proje 1:
 Program size trafiğin akışını gösterecek olan 2 haritadan birini seçmenizi isteyecek.
 Harita seçiminden sonra x,y,z ve t olan ana yollar arasından girişler ve çıkışlar seçilecek.
 2'den fazla giriş ve çıkış seçilemez
