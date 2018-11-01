@@ -1205,6 +1205,7 @@ int main()
     }
     getch();
     closegraph();
+    int a1,b,c,d,e,h;
     if(k==1)//2. HARITA SECIIRSE
     {
         int *a;
@@ -1222,26 +1223,49 @@ int main()
         scanf("%d",(a+3*6+5));
         printf("\na caddesi : ");
         scanf("%d",(a+0*6+0));
+        a1=*(a+0*6+0);
+        *(a+2*6+0)=a1;
         printf("\nb caddesi : ");
         scanf("%d",(a+0*6+1));
+        b=*(a+0*6+1);
+        *(a+1*6+1)=b;
         printf("\nc caddesi : ");
         scanf("%d",(a+2*6+2));
+        c=*(a+2*6+2);
+        *(a+3*6+2)=c;
         printf("\nd caddesi : ");
         scanf("%d",(a+1*6+3));
+        d=*(a+1*6+3);
+        *(a+2*6+3)=d;
         printf("\ne caddesi : ");
         scanf("%d",(a+1*6+4));
+        e=*(a+1*6+4);
+        *(a+3*6+4)=e;
         for(i=0; i<4; i++)
         {
             for(j=0; j<6; j++)
             {
-                printf("%d\t",*(a+i*6+j));
+                if(*(a+i*6+j)==0)
+                {
+                    printf("%d\t",*(a+i*6+j));
+                }
+                else if(*(a+i*6+j)==-1)
+                {
+                    printf("-1\t");
+                }
+                else
+                {
+                    *(a+i*6+j)=h;
+                    h=h/h;
+                    printf("%d\t",h);
+                }
             }
             printf("\n");
         }
     }
     else//1. HARITA SECILIRSE
     {
-        int *a,b;
+        int *a;
         a=(int*)malloc(4*5*sizeof(int));
         printf("Giris 1: %c       Giris 2: %c\n",giris1,giris2);
         printf("Cikis 1: %c       Cikis 2: %c\n",cikis1,cikis2);
@@ -1256,19 +1280,38 @@ int main()
         scanf("%d",(a+3*5+4));
         printf("\na caddesi : ");
         scanf("%d",(a+0*5+0));
-        b=*(a+0*5+0);
-        *(a+2*5+0)=b;
+        a1=*(a+0*5+0);
+        *(a+2*5+0)=a1;
         printf("\nb caddesi : ");
         scanf("%d",(a+0*5+1));
+        b=*(a+0*5+1);
+        *(a+1*5+1)=b;
         printf("\nc caddesi : ");
         scanf("%d",(a+2*5+2));
+        c=*(a+2*5+2);
+        *(a+3*5+2)=c;
         printf("\nd caddesi : ");
         scanf("%d",(a+1*5+3));
+        d=*(a+1*5+3);
+        *(a+2*5+3)=d;
         for(i=0; i<4; i++)
         {
             for(j=0; j<5; j++)
             {
-                printf("%d\t",*(a+i*5+j));
+                if(*(a+i*5+j)==0)
+                {
+                    printf("%d\t",*(a+i*5+j));
+                }
+                else if(*(a+i*5+j)==-1)
+                {
+                    printf("-1\t");
+                }
+                else
+                {
+                    *(a+i*5+j)=h;
+                    h=h/h;
+                    printf("%d\t",h);
+                }
             }
             printf("\n");
         }
